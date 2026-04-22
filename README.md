@@ -1,22 +1,53 @@
-British Airways: Data Science Technical Pipeline
+# British Airways: End-to-End Customer Lifecycle Analytics
+### Sentiment Scraping & Booking Prediction Pipeline
 
-End-to-End Customer Lifecycle Analytics: Sentiment Scraping to Booking Prediction
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-orange)](https://scikit-learn.org/)
+[![BeautifulSoup](https://img.shields.io/badge/Web%20Scraping-BeautifulSoup4-green)](https://www.crummy.com/software/BeautifulSoup/)
 
-1. Business Problem Statement
-To maintain its competitive edge, British Airways needs to convert digital engagement into revenue. This project addresses two critical needs:
-    Brand Perception: Analyzing thousands of unstructured third-party reviews to identify operational friction points.
-    Conversion Optimization: Predicting the likelihood of a customer completing a booking to enable proactive marketing interventions.
+## 📌 Project Overview
+To maintain its competitive edge, British Airways needs to convert digital engagement into revenue. This project addresses two critical business needs through a dual-stream data science pipeline:
 
-2. Dataset & Pipeline
-Sentiment Data: 3,000+ reviews scraped from SkyTrax using BeautifulSoup.113
-Booking Data: 50,000 rows of customer behavior metrics (flight duration, lead time, route, etc.).15
-The Pipeline: Data Scraping -> Text Preprocessing (NLP) -> Sentiment Labeling -> Feature Engineering -> Random Forest Classification -> Model Evaluation.
+1.  **Brand Perception:** Analyzing thousands of unstructured third-party reviews to identify operational friction points.
+2.  **Conversion Optimization:** Predicting the likelihood of a customer completing a booking to enable proactive marketing interventions.
 
-3. Key Insights & Results
-Customer Sentiment: 60% of reviews are positive, but key friction points were identified in "staff" and "verified" trip categories.
-Predictive Power: Built a Random Forest model with 85.4% accuracy.
-Top Predictors: purchase_lead (how far in advance they book) and flight_duration are the strongest indicators of whether a customer will complete a booking.
+---
 
-4. Tech Stack
-Language: Python 3.x
-Libraries: Scikit-learn, Pandas, NLTK, TextBlob, BeautifulSoup, Matplotlib.14
+## 🏗️ The Data Pipeline
+The project follows a structured end-to-end lifecycle:
+`Data Scraping` → `Text Preprocessing (NLP)` → `Sentiment Labeling` → `Feature Engineering` → `Random Forest Classification` → `Model Evaluation`
+
+### 1. Sentiment Analysis Stream
+* **Dataset:** 3,000+ reviews scraped from **SkyTrax**.
+* **Tools:** `BeautifulSoup`, `NLTK`, `TextBlob`.
+* **Insight:** Identified that while **60%** of reviews are positive, significant friction exists within "staff" and "verified" trip categories.
+
+### 2. Predictive Modeling Stream
+* **Dataset:** 50,000 rows of customer behavior metrics.
+* **Target:** Successful booking completion.
+* **Model:** Random Forest Classifier.
+* **Accuracy:** **85.4%**
+
+---
+
+## 📊 Key Results & Insights
+Through feature importance analysis, the following variables were identified as the strongest predictors of conversion:
+
+* **Purchase Lead:** How far in advance the customer searches/books.
+* **Flight Duration:** Longer hauls correlate differently with booking intent compared to short trips.
+* **Operational Friction:** Sentiment analysis pinpointed specific service areas that negatively impact brand loyalty.
+
+---
+
+## 🛠️ Tech Stack
+| Category | Tools/Libraries |
+| :--- | :--- |
+| **Language** | Python 3.x |
+| **Data Manipulation** | Pandas, NumPy |
+| **Web Scraping** | BeautifulSoup4, Requests |
+| **Machine Learning** | Scikit-learn (Random Forest) |
+| **NLP** | NLTK, TextBlob |
+| **Visualization** | Matplotlib, Seaborn |
+
+---
+
